@@ -17,7 +17,7 @@ Given these two points, a more accurate description of this analysis would proba
 Counting by other metrics, like number of followers, would probably paint a different picture. Some lifters are super popular but don't compete that often. For a more holistic analysis, I could do a composite metric like how many times an athlete appeared, how many likes and comments posts about them generate but in the interest of time, that's a task for another day. 
 
 # Repository contents
-1.`data` folder contains:
+1. `data` folder contains:
 - the `raw json` folder contains `hookgrip.json` that I called with an API using `requests`
 - the `cleaned_csvs` folder contains and pivoted dataframe on jupyter that I exported to datawrapper or rawrgraphs 
 2. the `notebooks` folder contains 2 drafts of the code I used
@@ -29,8 +29,8 @@ Counting by other metrics, like number of followers, would probably paint a diff
 - `index.html` main website
 
 # Findings
-1. Lasha Talakhadze is the most popular weightlifter on hookgrip. I wouldn't be surprised if this was the same with any other instagram page page like atg or weightliftinghouse
-2. Mattie Rogers is the 2nd most popular, not far after Lasha. This surprised me, I was expecting a Chinese lifter but the American women did very well. 
+1. `Lasha Talakhadze` is the most popular weightlifter on hookgrip. I wouldn't be surprised if this was the same with any other instagram page page like atg or weightliftinghouse considering he is by far the strongest weightlifter there has ever been. 
+2. `Mattie Rogers` is the 2nd most popular, not far after Lasha. This surprised me, I was expecting a Chinese lifter but the American women did very well. This made more sense once I remebered she is very outspoken and active on social media and has been medalling consistently at international comepition in years
 3. hookgrip probably has a regional bias. Some lifters are a lot more prolific but get featured less often. Could be because their ground team don't get a chance to go to competitions inside of China? Some of the American lifters that featured prominently on the page don't compete at large international meets that often (or at least don't rank well enough for a casual to notice) like C.J. Cummings for example. 
 
 # Data collection and analysis process
@@ -42,8 +42,17 @@ Steps of the data analysis process:
 
 
 # Skills and learnings
-As a lifter I follow said "Slow is smooth and smooth is fast". Don't try to brute force it, even though there are "only" about 80 rows and it seems managable. It's really not. 
+1. As a lifter I follow said "Slow is smooth and smooth is fast". Don't try to brute force it, even though there are "only" about 80 rows and it seems managable. It's really not. 
+- Once I thought about how I could structure my data, I used some lists to populate each column in `hookgrip_mostpopular_v2.ipynb` then pivot and group after rather than doing it beforehand in `hookgrip_mostpopular.ipynb` and then adding to a separate column. 
+- I wasted so much time trying to figure out if I should pivot the data first (bad idea) or leave it in its raw form work before realising rawgraphs will pivot for me and won't accept data from 2 columns anyway
 
-I remembered how to used dictionary and explode functions, which was fun cause I felt like my brain was also about to explode with this project. I knew I had to use the apply method to get the formula to copy paste but it was hard and Python got angry at me. 
+2. I *really* got to learn how to use dictionaries and functions properly and actually thinking about how to structure the data. 
+- From the start there was a CSV format that I could have downloaded and use to but I guess I wanted to make my life harder. On a more practical side I can't imagine how I would loop through each name in the mentions list if the file format was a csv
 
-Ended up using Excel to concat function and copy paste it back into Jupyter, like a sinner. This one was like API on steroids and once Soma hinted that I could restructure the data, it was a lot easier and could be coded in a lot fewer lines. I didn't think I would finish the project but here we are. Still looking forward to that code review though so I can figure out how to properly use regex functions to match instagram handles. 
+3. I learnt a new function `explode` from stack overflow, which was fun cause I felt like my brain was also about to explode with this project. 
+- I knew I had to use the apply method to get the formula to copy paste but it was hard and Python got angry at me. Explode was pretty helpful for duplicating the names across multiple rows to conveniently group and pivot. 
+
+4. In times of stress you go back to what you're used to. At one point I used Excel to concat my python code and copy paste it back into Jupyter, like a sinner. 
+- This project was like API on steroids and once Soma hinted that I could restructure the data, it was a lot easier and could be coded in a lot fewer lines. 
+
+5. I didn't think I would finish the project but here we are. Still looking forward to that code review though so I can figure out how to properly use regex functions to match instagram handles. 
