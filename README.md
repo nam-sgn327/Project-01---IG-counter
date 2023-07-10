@@ -23,7 +23,7 @@ Counting by other metrics, like number of followers, would probably paint a diff
 2. the `notebooks` folder contains 2 drafts of the code I used
 - `hookgrip_mostpopular.ipynb` is the notebook where I did it the super manual way with copy paste between Excel and Jupyter. I gave up making a dataframe from this workbook
 - `hookgrip_mostpopular_v2.ipynb` is where I took a step back and restructured my data so that rawrgraphs won't hate me and so I can pivot it on my own
-3. the `website` folder contains:
+3. the `docs` folder contains:
 - `pictures` folder with images exoported from rawgraphs and images used in the website 
 - `soma_style.css` that I stole from Soma 
 - `index.html` main website
